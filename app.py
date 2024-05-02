@@ -53,10 +53,10 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.5:
-      st.header('Izquierda, con Probabilidad: '+str( prediction[0][0]) )
+      st.header('Abriendo')
       client1.publish("IMIA","{'gesto': 'Abre'}",qos=0, retain=False)
       time.sleep(0.2)
     if prediction[0][1]>0.5:
-      st.header('Arriba, con Probabilidad: '+str( prediction[0][1]))
+      st.header('Cerrando')
       client1.publish("IMIA","{'gesto': 'Cierra'}",qos=0, retain=False)
       time.sleep(0.2)  
