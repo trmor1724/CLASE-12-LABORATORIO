@@ -25,6 +25,7 @@ broker="broker.mqttdashboard.com"
 port=1883
 client1= paho.Client("APP_CERR")
 client1.on_message = on_message
+client1.on_publish = on_publish
 
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
