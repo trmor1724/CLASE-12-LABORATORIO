@@ -23,7 +23,7 @@ def on_message(client, userdata, message):
 
 broker="broker.hivemq.com"
 port=1883
-client1= paho.Client("GOYO")
+client1= paho.Client("GOYOp")
 client1.on_message = on_message
 client1.on_publish = on_publish
 client1.connect(broker,port)
