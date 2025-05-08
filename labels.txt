@@ -1,0 +1,2 @@
+0 Abierta
+1 Cerrada
